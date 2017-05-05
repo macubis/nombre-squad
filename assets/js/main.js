@@ -45,6 +45,6 @@ var squad =[
 
 var miembros = document.getElementById("compañeras");
 	var mostrar = squad.forEach(function(elemento){
-    miembros.innerHTML += "<br>"+"<div>"+ "Nombre : "+elemento.nombre+" "+elemento.apellido+"<br>"+"Edad : "+elemento.edad+"<br>" + "Hobbies : "+elemento.hobbies[0]+" , "+elemento.hobbies[1]+" , "+elemento.hobbies[2]+"<br>"+ "</div>";
+    miembros.innerHTML += "<br>"+"<div>"+"Nombre : "+elemento.nombre+" "+elemento.apellido+"<br>"+"Edad : "+elemento.edad+"<br>" + "Hobbies : "+elemento.hobbies[0]+" , "+elemento.hobbies[1]+" , "+elemento.hobbies[2]+"<br>"+ "</div>";
 });
 mostrar();
