@@ -1,50 +1,33 @@
-var squad =[
-{
-	"nombre" : "Marcela",
-	"apellido" : "Cabello",
-	"edad" : 31,
-	"hobbies":["cantar","yoga","cocinar"],
-},
-{
-	"nombre" : "Melissa",
-	"apellido" : "Pacheco",
-	"edad" : 25,
-	"hobbies":["dormir","comer","matilda"],
-},
-{
-	"nombre" : "Karla",
-	"apellido" : "Jeria",
-	"edad" : 35,
-	"hobbies":["comer chocolate","viajar","ir al cine"],
-},
-{
-	"nombre" : "Tanya",
-	"apellido" : "Ramirez",
-	"edad" : 28,
-	"hobbies":["gatos","viajar","tomar tecito a las 4"],
-},
-{
-	"nombre" : "Valentina",
-	"apellido" : "Amala Kamala",
-	"edad" : 29,
-	"hobbies":["bordar","tejer","dormir"],
-},
-{
-	"nombre" : "Paula",
-	"apellido" : "Ponce",
-	"edad" : 28,
-	"hobbies":["Musica","Aves","heroes of the storm"],
-},
-{
-	"nombre" : "Mariela",
-	"apellido" : "Cubillos",
-	"edad" : 36,
-	"hobbies":["tejer","cocinar","comer chocolate"],
-},
-]
+function Miembros(nombre,apellido,edad,hobbies){
+	this.nombre = nombre;
+	this.apellido = apellido;
+	this.edad = edad;
+	this.hobbies =hobbies;
+}
+	var squad=[];
+	var marcela = new Miembros("Marcela","Cabello",31,["cantar","yoga","cocinar"]);
+	var melissa = new Miembros("Melissa","Pacheco",25,["dormir","comer","matilda"]);
+	var karla = new Miembros("Karla","Jeria",35,["comer chocolate","viajar","ir al cine"]);
+	var tanya = new Miembros("Tanya","Ramirez",28,["gatos","viajar","tomar tecito a las 4"]);
+	var valentina = new Miembros("Valentina","Amala Kamala",29,["bordar","tejer","dormir"]);
+	var paula = new Miembros("Paula","Ponce",28,["Musica","Aves","heroes of the storm"]);
+	var mariela = new Miembros("Mariela","Cubillos",36,["tejer","cocinar","comer chocolate"]);
 
-var miembros = document.getElementById("compañeras");
-	var mostrar = squad.forEach(function(elemento){
-    miembros.innerHTML += "<br>"+"<div>"+"Nombre : "+elemento.nombre+" "+elemento.apellido+"<br>"+"Edad : "+elemento.edad+"<br>" + "Hobbies : "+elemento.hobbies[0]+" , "+elemento.hobbies[1]+" , "+elemento.hobbies[2]+"<br>"+ "</div>";
-});
+	squad.push(marcela,melissa,karla,tanya,valentina,paula,mariela);
+
+function mostrar(){
+	var alum = document.getElementById("alumnas");
+	var alumna = squad.forEach(function(elem){
+	var compAux = document.createElement("div");	
+	alum.appendChild(compAux);
+	compAux.innerHTML = "<br>"+"Nombre : "+elem.nombre+" "+elem.apellido+"<br>"+"Edad : "+elem.edad;
+	});
+}
 mostrar();
+
+
+
+
+
+
+
